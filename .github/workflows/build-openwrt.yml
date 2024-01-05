@@ -68,9 +68,9 @@ jobs:
     - name: Update feeds
       run: |
         cd openwrt && ./scripts/feeds update -a
-        ./scripts/feeds update packages
-        rm -rf feeds/packages/lang/golang
-        svn co https://github.com/openwrt/packages/tree/openwrt-23.05/lang/golang feeds/packages/lang/golang
+        #./scripts/feeds update packages
+        #rm -rf feeds/packages/lang/golang
+        #svn co https://github.com/openwrt/packages/tree/openwrt-23.05/lang/golang feeds/packages/lang/golang
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
